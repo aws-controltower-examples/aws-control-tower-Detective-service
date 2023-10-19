@@ -22,7 +22,7 @@ Parameters:
   S3Key:
     Type: String
     Description: "The S3 Path to the Lambda Zip File"
-  cfnresponse:
+  CfnS3Key:
     Type: String
     Description: "The cfnrespons Zip File Path Add Here"
   RoleToAssume:
@@ -70,7 +70,7 @@ Resources:
         - python3.9
       Content:
         S3Bucket: !Ref S3SourceBucket
-        S3Key: !Ref cfnresponse
+        S3Key: !Ref CfnS3Key
       Description: v1.1.2 of cfnresponse
       LayerName: cfnresponse
 
